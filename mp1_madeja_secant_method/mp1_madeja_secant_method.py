@@ -51,7 +51,7 @@ def secant_main():
             x0, x1 = x1, x2
             iterations += 1
 
-        print("Maximum iterations reached. The method may not have converged.")
+        print("The method may not have converged.")
         return None
 
     def custom_round(value, dp):
@@ -68,7 +68,7 @@ def secant_main():
         print("\nIterations:", iterations)
         print("\n")
     else:
-        print("Unable to find the root within the given tolerance.")
+        print("Unable to find the root.")
           
 if __name__ == "__main__":
     secant_main()
