@@ -1,10 +1,8 @@
 import math
 
 def secant_main():
-    # Get the function from the user
     f_of_x = input("Enter the function: ")
 
-    # Notations for compatibility for both polynomial and transcendental functions
     f_of_x = f_of_x.replace(" ", "")    
     f_of_x = f_of_x.replace('^', '**')
     f_of_x = f_of_x.replace('e', 'math.e')
@@ -19,10 +17,8 @@ def secant_main():
     f_of_x = f_of_x.replace('sec', '1/math.cos')
     f_of_x = f_of_x.replace('cot', '1/math.tan')
 
-    # Define the lambda function
     function = lambda x: eval(f_of_x, {'x': x, 'math': math, 'sin': math.sin, 'cos': math.cos, 'tan': math.tan, 'log': math.log, 'log10': math.log10, 'e': math.e, 'exp': math.exp, 'csc': lambda x: 1/math.sin(x), 'sec': lambda x: 1/math.cos(x), 'cot': lambda x: 1/math.tan(x)})
 
-    # Get initial values, absolute error, and decimal places
     x0 = float(input("Enter the initial value x0: "))
     x1 = float(input("Enter the initial value x1: "))
     ea = float(input("Enter the absolute error: "))
